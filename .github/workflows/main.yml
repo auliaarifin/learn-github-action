@@ -23,7 +23,7 @@ jobs:
     needs: test
     steps:
       - name: menampilkan teks
-        run: echo "testing step deployment"- 
+        run: echo "testing steps deployment"- 
       - name : execute remote ssh commands using ssh key
         uses: appleboy/ssh-action@v1.2.0
         with:
