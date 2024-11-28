@@ -35,6 +35,6 @@ jobs:
             sudo rm -rf /var/www/html/*
             sudo rm -rf /var/www/html/.git
             sudo rm -rf /var/www/html/.github
-            sudo git clone https://github.com/alvinsenjaya/HeroBiz /var/www/html
+            sudo git clone https://github.com/auliaarifin/learn-github-action /var/www/html
             
               
