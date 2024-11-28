@@ -31,8 +31,10 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: /
+          script: |
             sudo rm -rf /var/www/html/*
+            sudo rm -rf /var/www/html/.git
+            sudo rm -rf /var/www/html/.github
             sudo git clone https://github.com/alvinsenjaya/HeroBiz /var/www/html
             
               
