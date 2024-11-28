@@ -23,4 +23,16 @@ jobs:
     needs: test
     steps:
       - name: menampilkan teks
-        run: echo "testing step deployment"
+        run: echo "testing step deployment"- 
+      - name : execute remote ssh commands using ssh key
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: /
+            sudo rm -rf /var/www/html/*
+            sudo git clone https://github.com/alvinsenjaya/HeroBiz /var/www/html
+            
+              
